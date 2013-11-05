@@ -1,0 +1,53 @@
+﻿
+<div class="container">
+    <div class="row ">
+        <div class="col-md-3 ">
+            <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                <ul class="nav nav-pills nav-stacked" data-bind="foreach: servers">
+                    <li data-bind="css: { active: $parent.activeServer() === $data }">
+                        <a data-bind="text: host, attr: { href: url() }, css: connectionStatus">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills  nav-stacked" data-bind="with: tempAddingItem">
+                    <li data-bind="css: { active: $parent.activeServer() === $data }">
+                        <a href="#manage/server/add">
+                            Add new server.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 ">
+            <div data-bind="visible: activeServer() === tempAddingItem()">
+                <div class="page-header">
+                    <h2>Add New Server</h2>
+                </div>
+                <form style="padding-top:20px;">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">http://</span>
+                        <input name="host" type="text" class="form-control" data-bind="value: tempAddingItem().host" placeholder="hostname.cloudapp.net:port">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">user</span>
+                        <input name="username" type="text" class="form-control" data-bind="value: tempAddingItem().username" placeholder="Username">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">pass</span>
+                        <input name="password" type="password" class="form-control" data-bind="value: tempAddingPass" placeholder="Password">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" data-bind="click:add.bind($data)">Add</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+
+
+            <div data-bind="visible: activeServer() !== tempAddingItem(), template: { name: 'subpages', data: activeServer().subpagesViewModel }">
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

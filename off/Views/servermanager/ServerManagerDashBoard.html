@@ -1,0 +1,128 @@
+﻿<div class="">
+
+
+    <!--<div class="container well-sm" data-bind="visible:progressStatus() !== '' ">
+        <h3 data-bind="text:progressStatus"></h3>
+        <div data-bind="foreach: progressWidth">
+            <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-bind="style: { width: $data }">
+                    <span class="sr-only">40% Complete (success)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>-->
+    <h3>Deployed</h3>
+    <div data-bind="foreach: deployedWebsites">
+        <div>
+            <h4>WebsiteName: <span data-bind="text:websiteName"></span></h4>
+            ContainerName: <span data-bind="text:containerName"></span>
+            Writeback: <span data-bind="text:writeback"></span>
+            <h5>Bindings</h5>
+            <div data-bind="foreach:bindings.items">
+                <span data-bind="text:uri"></span>
+            </div>
+
+        </div>
+
+    </div>
+    <h3>To be deployed</h3>
+    <div class="deployment" data-bind="foreach: websites">
+        <div class="">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="form-horizontal">
+                        <label for="websitename" class="control-label" style="min-width:120px;">Website Name</label>
+                        <div style="display:inline-block; margin-left:15px;">
+                            <input id="websitename" class="form-control" data-bind="value:websiteName" placeholder="Website Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label for="container" class="control-label">Container Name</label>
+                        <input id="container" placeholder="Container Name" type="text" class="form-control" data-bind="value:containerName">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" data-bind="checked: writeback"> Writeback
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="" data-bind="with : bindings">
+                        <label for="bindings" class="control-label">Bindings</label>
+                        <!-- ko foreach: items -->
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" data-bind="text: schema, click: toggleSchema"></button>
+                            </span>
+                            <input type="text" class="form-control" data-bind="value: hostname">
+
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <label>
+                                            <input type="checkbox"> Use SSL
+                                        </label>
+                                    </li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+
+                            </div><!-- /btn-group -->
+                        </div>
+                        <!-- /ko -->
+                        <div class="input-group" data-bind="with:tempAddingItem">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" data-bind="text: schema, click: toggleSchema"></button>
+                            </span>
+                            <input id="bindings" type="text" class="form-control" data-bind="value: hostname" placeholder="hostname">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" data-bind="click: $parent.add.bind($parent)">Add</button>
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="panel-footer">
+                    <div class="container">
+
+
+                        <div class="text-right pull-right">Size <span data-bind="text: (websiteZipSize() / 1024).toFixed(0)"></span> kb </div>
+                        <!-- ko if: tasks()().length > 0 -->
+                        <div data-bind="with: tasks()()[0]">
+                            <div class="pull-left col-sm-6" data-bind="text:title" style=""></div>
+                            <div class="pull-right text-right progress progress-striped" style="width: 100px; margin-right:10px; margin-bottom: 0px; border-radius:0px">
+                                <div class="progress-bar progress-bar-success" role="progressbar"
+                                     data-bind="style: { width: progessWidth }">
+                                    <span class="sr-only">40% Complete (success)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /ko-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="jumbotron droparea " data-bind="html5FileDropArea : fileHandler">
+            <h2 data-bind="text:subtitle"></h2>
+            <p class="lead" data-bind="text:leadText"></p>
+            <button class="btn btn-primary btn-lg" data-bind="click: deploy">Start</button>
+            <button class="btn btn-primary btn-lg">Clear</button>
+
+        </div>
+
+    </div>
+    <!--</div>-->
+</div>

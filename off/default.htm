@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+
+    <link rel="stylesheet" href="Content/bootstrap/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="Content/toastr.min.css" type="text/css" />
+
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+
+</head>
+<body>
+    <nav class="navbar  navbar-fixed-top" role="navigation">
+        <div class="container navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" data-bind="text:applicationTitle"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" data-bind="foreach: serviceMenu">
+                    <li><a data-bind="text: name, attr: { href: route[0] }"></a></li>
+                </ul>
+
+                <div class="navbar-right ">
+                    <button type="button" class="btn navbar-btn btn-primary" data-bind="click : navigateToServerManager ">
+                        <i class="icon-layers"></i> Manage Servers
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+ 
+        <div class="aux-foreground" >
+           
+
+
+
+        </div>
+
+
+    <!-- ko template: { name: viewTemplate, data: viewModel } -->
+    <!-- /ko -->
+    <div id="loading-splash" data-bind="css: { 'splash-hidden': !loading() }"></div>
+
+    <div class="container" style="position:fixed;bottom:50px;left:0;right:0;">
+        <div class="row" data-bind="visible:isHelpVisible" style="background-color: #080808; color:white;display:none; ">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Example Help Page <small>Subtext for header</small></h1>
+                </div>
+                <p>
+                    No help tekst so far.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar  navbar-fixed-bottom" role="banner">
+
+        <div class="container navbar-inverse ">
+
+            <ul class="nav navbar-nav navbar-right ">
+                <li data-bind="visible:taskManager.numberOfTasks() > 0" class="ac"><a href="#">Tasks <span class="badge" data-bind="text:taskManager.numberOfTasks"></span></a></li>
+                <li data-bind="css:{active:isHelpVisible}"><a href="#" data-bind="click:toggleHelp"><span style="color: #428bca; " class=" glyphicon glyphicon-question-sign"></span></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>

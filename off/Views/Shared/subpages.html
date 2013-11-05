@@ -1,0 +1,13 @@
+﻿<div class="page-header">
+    <h2><span data-bind="text:title"></span> <small data-bind="text: subtitle"></small></h2>
+    <ul class="nav nav-pills" data-bind="foreach: pages">
+        <li class="active" data-bind="css: { active: $parent.activePage() === $data }">
+            <a href="#" data-bind="click:$parent.navigate.bind($parent), text:pageTitle"></a>
+        </li>
+
+    </ul>
+
+</div>
+<div data-bind="template: { name: activePage().templateName, data: activePage() }">
+</div>
+
