@@ -48,6 +48,4 @@
 /// <reference path="simplepaginggrid-0.6.0.0.js" />
 /// <reference path="jquery.ext.datatables.js" />
 /// <reference path="jquery.datatables.js" />
-/// <reference path="less-1.4.1.js" />
-/// <reference path="knockout-bootstrap.js" />
 /// <reference path="bootstrap.datatables.js" />

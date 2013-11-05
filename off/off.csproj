@@ -619,6 +619,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\typings\node_redis\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -628,20 +629,13 @@
     <TypeScriptCompile Include="Scripts\typings\azure-mobile-services-client\AzureMobileServicesClient.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\bootstrap-notify\bootstrap-notify.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\d3\d3.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\d3\d3.superformula.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout.mapping\knockout.mapping.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\knockout.validation\knockout.validation.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\knockout\knockout.amd.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\msnodesql\msnodesql.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node-azure\azure.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node-fibers\node-fibers.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\node\node-0.8.8.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\node_redis\node_redis.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\sammyjs\sammyjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
   </ItemGroup>
