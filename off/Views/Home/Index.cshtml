@@ -8,155 +8,84 @@
 	</style>
 </head>
 @{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Home Page";
 }
 
+@Scripts.Render("~/bundles/base")
 <div class="jumbotron">
-    <h1>Avatar Alliance Portal</h1>
-    <p class="lead">Welcome.</p>
-    <table class="auto-style1">
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-	</table>
-</div>
-<div class="page-container row-fluid">
-		<!-- BEGIN SIDEBAR -->
-		<div class="page-sidebar nav-collapse collapse" style="width: 225px;">
-			<!-- BEGIN SIDEBAR MENU -->        
-			<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 1228px;"><ul class="page-sidebar-menu" style="overflow: hidden; width: auto; height: 1228px;">
-				
-				<li>&nbsp;</li>
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
+		<li><a href="#"><i class="fa fa-book fx2 fa-fw"></i> Library</a></li>
+		<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Applications</a></li>
+		<li><a href="#"><i class="fa fa-cogs fa-fw"></i> Settings</a></li>
+	</ul>
+	<h1>Avatar Alliance Portal</h1>
+	<p class="lead">Welcome.</p>
 
-				<li class="start ">
-					<a href="../index.php">
-					<i class="icon-home"></i> 
-					<span class="title">Home</span>					
-					</a>
-				</li>
-				
-				<li>
-					<a href="javascript:;">
-					<i class="icon-flag"></i> 
-					<span class="title">World Winners</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu expanded">
-						<li>
-							<a href="../index.php">
-							All Worlds</a>
-						</li>
-						<li>
-							<a href="../index.php?show=all">
-							English <img src="../images/flags/europeanunion.png" alt="flag"> <img src="../images/flags/us.png" alt="flag"> <img src="../images/flags/au.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=europe">
-							Europe <img src="../images/flags/europeanunion.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=usa">
-							U.S.A <img src="../images/flags/us.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=au">
-							Australia <img src="../images/flags/au.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=de">
-							German <img src="../images/flags/de.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=fr">
-							French <img src="../images/flags/fr.png" alt="flag"></a>
-						</li>
-						<li>
-							<a href="../index.php?show=es">
-							Spanish <img src="../images/flags/es.png" alt="flag"></a>
-						</li>											
-					</ul>
-				</li>
-
-
-				<li>
-					<a href="index.php">
-					<i class="icon-save"></i> 
-					<span class="title">Download LDC</span>					
-					</a>
-				</li>
-
-
-			</ul><div class="slimScrollBar ui-draggable" style="background-color: rgb(161, 178, 189); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; height: 1228px; background-position: initial initial; background-repeat: initial initial;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div></div>
-			<!-- END SIDEBAR MENU -->
-		</div>
-		<!-- END SIDEBAR -->
-		<!-- BEGIN PAGE -->
-		<div class="page-content" style="min-height:1228px !important">
-			<div class="container-fluid">
-				<div class="row-fluid">
-					<div class="span6">
-
-						<div class="portlet" style="background-color: rgba(100, 85, 70,0.7);">					
-							
-							<div class="portlet-body" style="padding:15px;">							
-								<table class="table table-striiped table-bordered table-advance table-hmover">
-									<tbody>
-
-									<!--<tr>
-										<td class="highlight">OLD</td>											
-										<td>0.928</td>												
-										<td><a href='downloads/LDC_v0.928_full.zip'><u>FULL</u><a/></td>
-										<td>Older version DO NOT USE live but available for code lookup.</td>
-									</tr>-->
-
-
-									</tbody>
-								</table>
-											
-
-
-
-
-
-
-							<!--<br>NEW</b> - <span class="title"><a href='downloads/LDC v0.931_upgrade.zip'>v0.931 UPGRADE from 0.928 -  Updated 21st August 2013.</a></span> 
-							<br>NEW</b> - <span class="title"><a href='downloads/LDC v0.931_full.zip'>v0.931 Full Installation -  Updated 21st August 2013.</a></span> 
-							<br>
-							<br>
-							<u>OLDER Versions</u><br>
-							<span class="title"><a href='downloads/LDC%20v0.928%20full.zip'>v0.928 FULL</a></span>-->
-
-							</div>
-						</div>
-						<!-- END SAMPLE TABLE PORTLET-->
-					</div>
-					<div class="span6">	
-						
-					
-					
-
-
-					</div>
-				</div>
-				<!-- END PAGE CONTENT-->
-			</div>
-			<!-- END PAGE CONTAINER-->
-			<div id="ajax_world_modal" class="modal container hide fade" tabindex="-1">Error!! please try again.</div>
-		</div>
-		<!-- END PAGE -->
+	<div id="logged-in">
+		You are logged in as <span id="login-name"></span>.
+		<i class="fa fa-book fa-fw"></i>
+		<button id="log-out">Log out</button>
 	</div>
+	<div id="logged-out">
+		You are not logged in.
+		<ul class="nav nav-pills nav-stacked">
+			<li><button id="login1"><i class="fa fx2 fa-cogs fa-fw"></i>microsoftaccount</button></li>
+			<li><button id="login2"><i class="fa fx4 fa-cogs fa-fw"></i>google</button></li>
+			<li><button id="login3"><i class="fa fx2 fa-cogs fa-fw"></i>twitter</button></li>
+			<li><button id="login3"><i class="fa fx4 fa-cogs fa-fw"></i>facebook</button></li>
+		</ul>
+	</div>
+	<i class="icon-home"></i>
+
+	<script src="https://avalol.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
+	<script>
+		var client=new WindowsAzure.MobileServiceClient(
+		"https://avalol.azure-mobile.net/",
+		"zCkmfPjSwERvuvdJexZZaNQTWAcrav37");
+
+		function refreshAuthDisplay() {
+			var isLoggedIn=client.currentUser!==null;
+			$("#logged-in").toggle(isLoggedIn);
+			$("#logged-out").toggle(!isLoggedIn);
+
+
+			if(isLoggedIn) {
+				$("#login-name").text(client.currentUser.userId);
+				refreshTodoItems();
+			}
+
+
+		}
+
+
+		function logIn(sp) {
+			client.login(sp).then(refreshAuthDisplay,function(error) {
+				alert(error);
+			});
+		}
+
+
+		function logOut() {
+			client.logout();
+			refreshAuthDisplay();
+			$('#summary').html('<strong>You must login to access data.</strong>');
+		}
+
+
+		// On page init, fetch the data and set up event handlers
+		$(function() {
+			refreshAuthDisplay();
+			$('#summary').html('<strong>You must login to access data.</strong>');
+			$("#logged-out #login1").click(logIn.bind("microsoftaccount"));
+			$("#logged-out longin2").click(logIn.bind("google"));
+			$("#logged-out button #login3").click(logIn.bind("twitter"));
+			$("#logged-out button login4").click(logIn.bind("facebook"));
+
+			$("#logged-in button").click(logOut);
+		});
+
+
+	</script>
+
+</div>

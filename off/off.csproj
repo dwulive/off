@@ -618,7 +618,9 @@
     <Content Include="Scripts\main.min.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
     <Folder Include="Scripts\typings\node_redis\" />
   </ItemGroup>
   <ItemGroup>
